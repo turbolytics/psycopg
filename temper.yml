@@ -1,0 +1,11 @@
+temper: "0.1"
+project: psycopg
+
+# One column per way psycopg runs. The same tests run in each.
+levels:
+  - name: python
+    description: the pure-Python implementation (PSYCOPG_IMPL=python), libpq 18
+  - name: c
+    description: the C implementation (PSYCOPG_IMPL=c), libpq 18
+  - name: python_libpq13
+    description: the pure-Python implementation on Rocky Linux 8, with the system libpq 13

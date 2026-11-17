@@ -1,0 +1,7 @@
+id: batch.async_executemany
+kind: batch_path
+feature: batch.async_executemany
+answers:
+  batch.contract:
+    all_or_nothing_in_autocommit: supported
+    all_or_nothing_in_transaction: supported

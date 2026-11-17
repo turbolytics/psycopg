@@ -1,0 +1,10 @@
+id: send.client_cursor
+kind: send_path
+feature: send.client_cursor
+answers:
+  send.contract:
+    numbers_keep_value: supported
+    text_and_bytes_keep_value: supported
+    bytes_keep_value_scs_off: supported
+    dates_times_keep_value: supported
+    containers_keep_value: supported

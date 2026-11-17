@@ -1,0 +1,9 @@
+id: pool.contract
+description: >
+  Every pool class hands out a usable, idle connection, and times out on time when it has none.
+applies_to: pool
+requires: [python, c, python_libpq13]
+members:
+  - key: returned_connection_is_clean
+  - key: replaces_killed_connection
+  - key: times_out_when_exhausted

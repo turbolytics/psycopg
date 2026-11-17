@@ -1,0 +1,11 @@
+id: send.contract
+description: >
+  Every way to send a value to the server stores the same value. The reference is a literal written in SQL, built from hex where quoting could get in the way.
+applies_to: send_path
+requires: [python, c, python_libpq13]
+members:
+  - key: numbers_keep_value
+  - key: text_and_bytes_keep_value
+  - key: bytes_keep_value_scs_off
+  - key: dates_times_keep_value
+  - key: containers_keep_value

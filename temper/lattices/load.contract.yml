@@ -1,0 +1,10 @@
+id: load.contract
+description: >
+  Every result format loads the value the server holds, or raises when Python cannot hold it. It never returns a different value.
+applies_to: load_format
+requires: [python, c, python_libpq13]
+members:
+  - key: numbers_match_server
+  - key: intervals_match_server_or_raise
+  - key: dates_times_match_server_or_raise
+  - key: text_and_arrays_match_server

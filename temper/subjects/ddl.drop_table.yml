@@ -1,0 +1,7 @@
+id: ddl.drop_table
+kind: ddl
+feature: ddl.drop_table
+answers:
+  prepare.contract:
+    survives_first_run: supported
+    survives_repeated_run: supported

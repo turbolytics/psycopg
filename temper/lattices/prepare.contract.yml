@@ -1,0 +1,8 @@
+id: prepare.contract
+description: >
+  A prepared statement keeps working after a statement that changes the schema or the server's prepared statements, the first time it runs and when the same statement runs again.
+applies_to: ddl
+requires: [python, c, python_libpq13]
+members:
+  - key: survives_first_run
+  - key: survives_repeated_run

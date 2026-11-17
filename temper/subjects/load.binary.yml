@@ -1,0 +1,9 @@
+id: load.binary
+kind: load_format
+feature: load.binary
+answers:
+  load.contract:
+    numbers_match_server: supported
+    intervals_match_server_or_raise: supported
+    dates_times_match_server_or_raise: supported
+    text_and_arrays_match_server: supported

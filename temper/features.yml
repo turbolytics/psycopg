@@ -1,0 +1,60 @@
+# One feature per way to do something. The lattices in lattices/ say what
+# every way must guarantee.
+features:
+  - id: send.bind_text
+    description: "Bound parameter in text format (%t)."
+    requires: [python, c, python_libpq13]
+  - id: send.bind_binary
+    description: "Bound parameter in binary format (%b)."
+    requires: [python, c, python_libpq13]
+  - id: send.client_cursor
+    description: "ClientCursor, which merges values into the query as literals."
+    requires: [python, c, python_libpq13]
+  - id: send.sql_literal
+    description: "psycopg.sql.Literal."
+    requires: [python, c, python_libpq13]
+  - id: send.copy_text
+    description: "COPY FROM STDIN in text format."
+    requires: [python, c, python_libpq13]
+  - id: send.copy_binary
+    description: "COPY FROM STDIN in binary format."
+    requires: [python, c, python_libpq13]
+  - id: load.text
+    description: "Results in text format."
+    requires: [python, c, python_libpq13]
+  - id: load.binary
+    description: "Results in binary format."
+    requires: [python, c, python_libpq13]
+  - id: batch.executemany
+    description: "Cursor.executemany."
+    requires: [python, c, python_libpq13]
+  - id: batch.executemany_returning
+    description: "Cursor.executemany(returning=True)."
+    requires: [python, c, python_libpq13]
+  - id: batch.async_executemany
+    description: "AsyncCursor.executemany."
+    requires: [python, c, python_libpq13]
+  - id: batch.client_cursor_executemany
+    description: "ClientCursor.executemany."
+    requires: [python, c, python_libpq13]
+  - id: ddl.drop_table
+    description: "DROP TABLE, then CREATE TABLE with a new column type."
+    requires: [python, c, python_libpq13]
+  - id: ddl.discard_all
+    description: "DISCARD ALL."
+    requires: [python, c, python_libpq13]
+  - id: ddl.deallocate_all
+    description: "DEALLOCATE ALL."
+    requires: [python, c, python_libpq13]
+  - id: pool.connection_pool
+    description: "psycopg_pool.ConnectionPool."
+    requires: [python, c, python_libpq13]
+  - id: pool.null_connection_pool
+    description: "psycopg_pool.NullConnectionPool."
+    requires: [python, c, python_libpq13]
+  - id: pool.async_connection_pool
+    description: "psycopg_pool.AsyncConnectionPool."
+    requires: [python, c, python_libpq13]
+  - id: pool.async_null_connection_pool
+    description: "psycopg_pool.AsyncNullConnectionPool."
+    requires: [python, c, python_libpq13]

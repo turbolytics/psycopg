@@ -1,0 +1,8 @@
+id: pool.null_connection_pool
+kind: pool
+feature: pool.null_connection_pool
+answers:
+  pool.contract:
+    returned_connection_is_clean: supported
+    replaces_killed_connection: supported
+    times_out_when_exhausted: supported

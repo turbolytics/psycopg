@@ -1,0 +1,8 @@
+id: batch.contract
+description: >
+  When one row of a batch fails, no row is committed, in autocommit or in a transaction.
+applies_to: batch_path
+requires: [python, c, python_libpq13]
+members:
+  - key: all_or_nothing_in_autocommit
+  - key: all_or_nothing_in_transaction

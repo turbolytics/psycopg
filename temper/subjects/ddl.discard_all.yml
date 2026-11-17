@@ -1,0 +1,7 @@
+id: ddl.discard_all
+kind: ddl
+feature: ddl.discard_all
+answers:
+  prepare.contract:
+    survives_first_run: supported
+    survives_repeated_run: supported
