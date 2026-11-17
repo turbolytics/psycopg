@@ -44,6 +44,8 @@ Exempt cells are excused by a passing proof. Regenerate with `temper matrix`.
 
 When one row of a batch fails, no row is committed, in autocommit or in a transaction.
 
+Each cell shows one mark per level, in order: `python`, `c`, `python_libpq13`.
+
 | Member | `batch.async_executemany` | `batch.client_cursor_executemany` | `batch.executemany` | `batch.executemany_returning` |
 | --- | --- | --- | --- | --- |
 | `all_or_nothing_in_autocommit` | ✅ ✅ ❌ | ✅ ✅ ❌ | ✅ ✅ ❌ | ✅ ✅ ❌ |
@@ -52,6 +54,8 @@ When one row of a batch fails, no row is committed, in autocommit or in a transa
 ### `load.contract`
 
 Every result format loads the value the server holds, or raises when Python cannot hold it. It never returns a different value.
+
+Each cell shows one mark per level, in order: `python`, `c`, `python_libpq13`.
 
 | Member | `load.binary` | `load.text` |
 | --- | --- | --- |
@@ -64,6 +68,8 @@ Every result format loads the value the server holds, or raises when Python cann
 
 Every pool class hands out a usable, idle connection, and times out on time when it has none.
 
+Each cell shows one mark per level, in order: `python`, `c`, `python_libpq13`.
+
 | Member | `pool.async_connection_pool` | `pool.async_null_connection_pool` | `pool.connection_pool` | `pool.null_connection_pool` |
 | --- | --- | --- | --- | --- |
 | `returned_connection_is_clean` | ✅ ✅ ✅ | ✅ ✅ ✅ | ✅ ✅ ✅ | ✅ ✅ ✅ |
@@ -74,6 +80,8 @@ Every pool class hands out a usable, idle connection, and times out on time when
 
 A prepared statement keeps working after a statement that changes the schema or the server's prepared statements, the first time it runs and when the same statement runs again.
 
+Each cell shows one mark per level, in order: `python`, `c`, `python_libpq13`.
+
 | Member | `ddl.deallocate_all` | `ddl.discard_all` | `ddl.drop_table` |
 | --- | --- | --- | --- |
 | `survives_first_run` | ✅ ✅ ✅ | ✅ ✅ ✅ | ✅ ✅ ✅ |
@@ -82,6 +90,8 @@ A prepared statement keeps working after a statement that changes the schema or 
 ### `send.contract`
 
 Every way to send a value to the server stores the same value. The reference is a literal written in SQL, built from hex where quoting could get in the way.
+
+Each cell shows one mark per level, in order: `python`, `c`, `python_libpq13`.
 
 | Member | `send.bind_binary` | `send.bind_text` | `send.client_cursor` | `send.copy_binary` | `send.copy_text` | `send.sql_literal` |
 | --- | --- | --- | --- | --- | --- | --- |
